@@ -15,6 +15,12 @@ Go to the project directory
   cd keycloack-dotnet8
 ```
 
+Change configurations
+
+```bash
+  Update configurations on docker-compose.override.yml
+```
+
 Start containers
 
 ```bash
