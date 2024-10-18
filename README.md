@@ -1,6 +1,6 @@
 # keycloack-dotnet8
 
-A simple Keycloak, Postgres and a Dotnet api integration
+A simple Keycloak, Postgres and a Dotnet 8 api integration
 ## Run Locally
 
 Clone the project
