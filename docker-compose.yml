@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  webapi:
+    container_name: keycloak-webapi
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: src/webapi/Dockerfile
+    networks:
+      - keycloak
+  keycloak:
+    container_name: keycloak
+    image: quay.io/keycloak/keycloak
+    command: start-dev
+    depends_on:
+      - keycloakdb
+    ports:
+      - 8080:8080
+    networks:
+      - keycloak
+  keycloakdb:
+    container_name: keycloak-postgres
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - keycloak
+
+volumes:
+  postgres_data:
+
+networks:
+  keycloak:
