@@ -24,15 +24,13 @@ Start containers
 
 ## API Reference
 
-#### Get all items
+#### authenticated user name and roles
 
 ```http
   GET /users
 ```
 
-| Description                |
-| :------------------------- |
-| Returns authenticated user name and roles |
+#### authenticated user name and roles
 
 ```http
   GET /users/adm
@@ -40,7 +38,6 @@ Start containers
 
 | Description                |
 | :------------------------- |
-| Returns authenticated user name and roles | 
 | **Required** Bearer token with adm role | 
 
 
